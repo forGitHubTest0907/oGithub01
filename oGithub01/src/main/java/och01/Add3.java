@@ -29,7 +29,7 @@ public class Add3 extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("doGet 여기 왔네");
+		System.out.println("doGet 여기 왔나");
 		// Parameter 받기
 		int num = Integer.parseInt(request.getParameter("num"));	//request에 num, loc 값 들어있음, 문자열을 대신 숫자로 바꿔줘야 함
 		String loc = request.getParameter("loc");

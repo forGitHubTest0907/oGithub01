@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function chk() {	//검열용
+				if (!frm.num.value) {
+					alert("숫자 입력 ?");
+					frm.num.focus();	//커서 깜박이기
+					return false;
+				}
+				if (isNaN(frm.num.value)) {
+					alert("숫자가 아님 헐 ?");
+					frm.num.focus();
+					frm.num.value = "";		//입력된 글자 지우기
+					return false;	// Add3로 안 넘어가도록 
+				}
+				
+				return true;
+				
+			}
+		</script>
+	</head>
+	<body>	<!-- 화면에 보이기 -->
+		<h1>숫자를 입력하세요</h1>	
+		<form action="Add3" name="frm" method="get" onsubmit="return chk()">	
+		<!-- 서버 프로그램, 하단에 확인을 누르면 입력값을 가지고 여기로 이동함 -->
+			숫자: <input type="text" name="num" ><p>
+			위치: <input type="text" name="loc"><p>
+				 <input type="submit" value="확인">
+			
+		</form>
+	</body>
+</html>
